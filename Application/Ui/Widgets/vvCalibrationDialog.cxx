@@ -45,6 +45,9 @@ public:
 #if LIDARVIEW_BUILD_HESAI
     this->AvailableInterpreters.insert("Hesai", vvCalibration::Plugin::HESAI);
 #endif
+#if LIDARVIEW_BUILD_WINGTECH
+    this->AvailableInterpreters.insert("Wingtech", vvCalibration::Plugin::WINGTECH);
+#endif
 
     // Velodyne Calibration
     const std::vector<QString> velodyneCalibFiles = { "HDL-32.xml",
@@ -56,6 +59,9 @@ public:
 
     // Hesai Calibration
     const std::vector<QString> hesaiCalibFiles = { "PandarXT.csv", "Pandar128.csv" };
+
+    // Wingtech Calibration
+    const std::vector<QString> wingtechCalibFiles = { "WT150.csv" };
 
     QString prefix;
 #if defined(_WIN32)
@@ -73,6 +79,10 @@ public:
     for (size_t k = 0; k < hesaiCalibFiles.size(); ++k)
     {
       this->BuiltInCalibrationFiles[vvCalibration::Plugin::HESAI] << prefix + hesaiCalibFiles[k];
+    }
+    for (size_t k = 0; k < wingtechCalibFiles.size(); ++k)
+    {
+      this->BuiltInCalibrationFiles[vvCalibration::Plugin::WINGTECH] << prefix + wingtechCalibFiles[k];
     }
   }
 

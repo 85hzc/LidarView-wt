@@ -18,6 +18,9 @@ endif()
 if(LIDARVIEW_BUILD_HESAI)
     add_subdirectory(Plugins/HesaiPlugin)
 endif()
+if(LIDARVIEW_BUILD_WINGTECH)
+    add_subdirectory(Plugins/WingtechPlugin)
+endif()
 
 # Application
 add_subdirectory(Application)

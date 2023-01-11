@@ -23,6 +23,7 @@ superbuild_add_project(lidarview
     -DLIDARVIEW_BUILD_SLAM=${LIDARVIEW_BUILD_SLAM}
     -DLIDARVIEW_BUILD_VELODYNE=${INTERPRETER_ENABLE_Velodyne}
     -DLIDARVIEW_BUILD_HESAI=${INTERPRETER_ENABLE_Hesai}
+    -DLIDARVIEW_BUILD_WINGTECH=${INTERPRETER_ENABLE_Wingtech}
     #$lidarview_appname additional configuration
 )
 

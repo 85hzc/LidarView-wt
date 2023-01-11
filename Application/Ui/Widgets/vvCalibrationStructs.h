@@ -24,7 +24,8 @@ enum class Plugin
 {
   UNKNOWN,
   VELODYNE,
-  HESAI
+  HESAI,
+  WINGTECH
 };
 
 struct TransformConfig

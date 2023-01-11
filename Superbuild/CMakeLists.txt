@@ -16,6 +16,7 @@ if(INTERPRETER_ENABLE_Hesai)
     message(FATAL_ERROR "Hesai interpreter requires pcl")
   endif()
 endif()
+option(INTERPRETER_ENABLE_Wingtech "Enable Wingtech interpreter " ON)
 
 list(APPEND superbuild_project_roots
   "${CMAKE_CURRENT_SOURCE_DIR}/Projects")

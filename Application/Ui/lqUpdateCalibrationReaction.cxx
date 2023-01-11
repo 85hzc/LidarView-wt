@@ -170,6 +170,12 @@ void lqUpdateCalibrationReaction::setReaderCalibration(vtkSMProxy* proxy,
       defaultProxy =
         proxyListDomain->FindProxy("LidarPacketInterpreter", "VelodyneMetaPacketInterpreter");
     }
+    else if (interpreter == vvCalibration::Plugin::WINGTECH)
+    {
+      // Set Wingtech Interpreter as Default
+      defaultProxy =
+        proxyListDomain->FindProxy("LidarPacketInterpreter", "WingtechPacketInterpreter");
+    }
     else
     {
       qCritical() << "Unknown Interpreter Type";
