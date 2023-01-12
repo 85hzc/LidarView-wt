@@ -1,0 +1,6 @@
+NAME
+  WingtechPlugin
+DESCRIPTION
+  Reader and other filter specific for Wingtech
+REQUIRES_MODULES
+  VTK::CommonCore
